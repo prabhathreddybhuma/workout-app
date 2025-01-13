@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Planner</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script defer src="script.js"></script>
+  <title>Workout App</title>
 </head>
 <body>
-    <header>
-        <h1>Workout Planner</h1>
-    </header>
-    <main>
-        <form action="/result" method="POST">
-            <label for="weight">Weight (kg):</label>
-            <input type="number" id="weight" name="weight" required>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <h1>Workout<span>Pro</span></h1>
+    </div>
+    <nav class="nav-links">
+      <a href="#workouts">Workouts</a>
+      <a href="#bmi-calculator">BMI Calculator</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="cta">
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </header>
 
-            <label for="height">Height (cm):</label>
-            <input type="number" id="height" name="height" required>
+  <!-- Main Content Section -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h2>Your Fitness Journey Starts Here</h2>
+      <p>Calculate your BMI and get personalized workout recommendations!</p>
+    </section>
 
-            <label for="goal">Goal:</label>
-            <select id="goal" name="goal" required>
-                <option value="build_muscle">Build Muscle</option>
-                <option value="lose_weight">Lose Weight</option>
-                <option value="both">Both</option>
-            </select>
+    <!-- BMI Calculator Section -->
+    <section id="bmi-calculator" class="bmi-section">
+      <h2>BMI Calculator</h2>
+      <form id="bmi-form">
+        <label for="age">Age:</label>
+        <input type="number" id="age" required placeholder="Enter your age">
+        
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" required placeholder="Enter your weight">
+        
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" required placeholder="Enter your height">
+        
+        <label for="goal">Goal:</label>
+        <select id="goal">
+          <option value="muscle">Build Muscle</option>
+          <option value="weight-loss">Lose Weight</option>
+          <option value="both">Both</option>
+        </select>
+        
+        <button type="submit" class="calculate-btn">Calculate BMI</button>
+      </form>
+      <div id="result" class="result"></div>
+    </section>
 
-            <button type="submit">Get Workout Plan</button>
-        </form>
-    </main>
+    <!-- Workouts Section -->
+    <section id="workouts" class="workouts-section">
+      <h2>Recommended Workouts</h2>
+      <div id="workout-list" class="workout-list">
+        <!-- Workouts will be displayed here dynamically -->
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+      <p>&copy; 2025 WorkoutPro. All rights reserved.</p>
+    </footer>
+  </main>
 </body>
 </html>

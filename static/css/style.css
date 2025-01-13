@@ -1,0 +1,95 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #121212; /* Dark theme */
+    color: #ffffff;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(18, 18, 18, 0.8); /* Glass effect */
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .logo span {
+    color: #00ff88;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    margin: 0 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #00ff88;
+  }
+  
+  .cta .cta-btn {
+    background: linear-gradient(45deg, #00ff88, #00d4ff);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    color: #121212;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.6);
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #1c1c1c, #121212);
+  }
+  
+  .bmi-section, .workouts-section {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .calculate-btn {
+    margin-top: 1rem;
+    background: #00d4ff;
+    color: #121212;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #00ff88;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(18, 18, 18, 0.9);
+  }
+  

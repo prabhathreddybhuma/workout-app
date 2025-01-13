@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <div class="background">
+        <div class="gradient"></div>
+    </div>
     <header>
         <h1>Your Workout Plan</h1>
     </header>
     <main>
-        <p>Your BMI: {{ bmi }}</p>
-        <p>Category: {{ category }}</p>
-        <h2>Recommended Workouts:</h2>
-        <ul>
-            {% for workout in workouts %}
-            <li>{{ workout }}</li>
-            {% endfor %}
-        </ul>
-        <a href="/">Go Back</a>
+        <div class="result-container">
+            <p><strong>Your BMI:</strong> {{ bmi }}</p>
+            <p><strong>Category:</strong> {{ category }}</p>
+            <h2>Recommended Workouts:</h2>
+            <ul>
+                {% for workout in workouts %}
+                <li>{{ workout }}</li>
+                {% endfor %}
+            </ul>
+            <a href="/">Go Back</a>
+        </div>
     </main>
 </body>
 </html>
